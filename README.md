@@ -99,11 +99,16 @@ https://titanic-324206.de.r.appspot.com
 
 Nonetheless, app is also deployed free on [my heroku](https://chek-titanic-app.herokuapp.com/) and available 24/7. Feel free to visit and play with app on heroku. 
 
-## Advantages of using Docker
+# Advantages of using Docker
 1. Build once, deploy anywhere
 Irrespective of hardware and OS capabilities, ML app will work when deployed. 
 App could also be deployed on other cloud platforms like Azure, AWS as well.
 
-2. Good practice to productionize an ML app. No chance of missing any important components when running app on QA, UAT, PROD environments. 
+2. Good practice to productionize an ML app. Reduce chance of missing any important components when running app on QA, UAT, PROD environments. 
 
 3. Version control. Image could also be pushed to repository (Eg. Docker Hub), and changes will be applied whenever an environment pulls. 
+
+# Future enhancement
+1. Experiment with deployments on other cloud platforms like Microsoft Azure, AWS
+
+2. Better ML App (Eg. allow users to upload train data to re-train model), with better prediction performance through using other ML models. 
