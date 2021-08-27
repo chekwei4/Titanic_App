@@ -1,6 +1,8 @@
 FROM python:3.8
 WORKDIR /app
-COPY . /app
-EXPOSE 8501
+COPY requirements.txt ./requirements.txt
 RUN pip3 install -r requirements.txt
-CMD streamlit run app.py
+EXPOSE 8501
+COPY . /app
+ENTRYPOINT ["streamlit", "run"]
+CMD ["app.py"]
