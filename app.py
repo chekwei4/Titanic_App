@@ -4,6 +4,7 @@ import pandas as pd
 import streamlit as st
 from PIL import Image
 import webbrowser
+from bokeh.models.widgets import Div
 from sklearn.ensemble import RandomForestClassifier
 
 st.set_page_config(page_title="Chek's Titanic App") 
@@ -24,11 +25,19 @@ open_github = col2.button("💻 Project Github")  # logic handled further down
 
 if open_colab:
     print("opening eda...")
-    webbrowser.open_new_tab("https://colab.research.google.com/drive/1TSczMMp1Rya-ib6tE__lsP32pqm9TB45?usp=sharing")
+    # webbrowser.open_new_tab("https://colab.research.google.com/drive/1TSczMMp1Rya-ib6tE__lsP32pqm9TB45?usp=sharing")
+    js = "window.open('https://colab.research.google.com/drive/1TSczMMp1Rya-ib6tE__lsP32pqm9TB45?usp=sharing')"
+    html = '<img src onerror="{}">'.format(js)
+    div = Div(text=html)
+    st.bokeh_chart(div)
 
 if open_github:
     print("opening eda...")
-    webbrowser.open_new_tab("https://github.com/chekwei4/Titanic_App")
+    # webbrowser.open_new_tab("https://github.com/chekwei4/Titanic_App")
+    js = "window.open('https://github.com/chekwei4/Titanic_App')"
+    html = '<img src onerror="{}">'.format(js)
+    div = Div(text=html)
+    st.bokeh_chart(div)
 
 
 """
