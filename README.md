@@ -90,6 +90,7 @@ Deployed service [default] to [https://titanic-324206.de.r.appspot.com]
 
 ## App is ready
 App is deployed and running on GCP via below URL.
+
 https://titanic-324206.de.r.appspot.com
 <p align="center">
     <img src="./app.png">
