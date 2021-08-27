@@ -79,6 +79,7 @@ def main():
     st.text("Thanks for dropping by...")
     st.markdown('Created by [Chekwei](https://github.com/chekwei4/)')
     st.markdown('Other projects [Here](https://chekwei4.github.io/Chek_Wei_Portfolio/)')
+    print("code runs successfully...")
 
 if __name__=='__main__':
     main()

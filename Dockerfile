@@ -1,6 +1,6 @@
 FROM python:3.8
-COPY . /usr/app/
-EXPOSE 5000
-WORKDIR /usr/app/
-RUN pip install -r requirements.txt
+WORKDIR /app
+COPY . /app
+EXPOSE 8501
+RUN pip3 install -r requirements.txt
 CMD streamlit run app.py
