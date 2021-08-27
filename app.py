@@ -6,6 +6,7 @@ from PIL import Image
 import webbrowser
 from sklearn.ensemble import RandomForestClassifier
 
+st.set_page_config(page_title="Chek's Titanic App") 
 image = Image.open('pic.jpeg') 
 st.image(image, caption='Unsplash @lightrisephoto')
 st.title("Will you survive the Titanic Disaster?")
