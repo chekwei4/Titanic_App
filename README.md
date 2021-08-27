@@ -97,3 +97,5 @@ https://titanic-324206.de.r.appspot.com
 *At this point in time, app might have stopped running in order to prevent overbilling on GCP account.*
 
 App is also deployed free on heroku. 
+
+## Advantages of using Docker
