@@ -103,6 +103,7 @@ Nonetheless, app is also deployed free on [my heroku](https://chek-titanic-app.h
 # Advantages of using Docker
 
 ![Docker Advantages](https://miro.medium.com/max/700/1*IXVC0pnk5SZ0uIWF6xo1VQ.png)
+
 *Credit: Xavier Vasques*
 
 1. Build once, deploy anywhere
