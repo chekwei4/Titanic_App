@@ -3,19 +3,39 @@ import pickle
 import pandas as pd
 import streamlit as st
 from PIL import Image
+import webbrowser
 from sklearn.ensemble import RandomForestClassifier
 
+image = Image.open('pic.jpeg') 
+st.image(image, caption='Unsplash @lightrisephoto')
 st.title("Will you survive the Titanic Disaster?")
-st.markdown("<br>", unsafe_allow_html=True)
-"""### Simple Machine Learning App that predicts the most classical ML problem.
+"""
+### Simple Machine Learning App that predicts a classical ML problem
+"""
+"""
+Powered by Streamlit, deployed on GCP...
+"""
 
+col1, col2 = st.columns(2)
+open_colab = col1.button("🚀 EDA in Colab")  # logic handled further down
+open_github = col2.button("💻 Project Github")  # logic handled further down
+
+
+if open_colab:
+    print("opening eda...")
+    webbrowser.open_new_tab("https://colab.research.google.com/drive/1TSczMMp1Rya-ib6tE__lsP32pqm9TB45?usp=sharing")
+
+if open_github:
+    print("opening eda...")
+    webbrowser.open_new_tab("https://github.com/chekwei4/Titanic_App")
+
+
+"""
 1. Tell me who you are!
 
 2. Predict away!
 
-3. Explore project EDA script if you wish.
-
-4. Don't forget to check out my other projects *(link down below)*
+3. Don't forget to check out my other projects *(link down below)*
 ---
 """
 
@@ -25,16 +45,9 @@ def predict(X):
     pred = classifier.predict(X)
     return pred
 
-st.write("")  # add vertical space
-col1, col2, col3 = st.columns(3)
-open_colab = col1.button("🚀 Open EDA in Colab")  # logic handled further down
-open_colab = col2.button(" Download .py")  # logic handled further down
-colab_error = st.empty()
 
 def main():
-
     user_name = st.text_input("Name", "Jack Dawson")
-
     selected_sex = st.radio("Select Sex", ("Male", "Female"))
     selected_sex_enc = None
     if selected_sex=="Male":
